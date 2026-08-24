@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contactez MBL Accompagnement — assistance à la préparation des dossiers immobiliers et coordination en amont des avant-contrats."
+    />
+    <title>MBL Accompagnement | Contact</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- reCAPTCHA v2 (checkbox) - rendu explicite (plus fiable en local) -->
+    <script defer src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+    <!-- EmailJS (navigateur) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Config locale (clés / IDs) -->
+    <script defer src="./js/emailjs-config.js"></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="MBL Accompagnement — Accueil">
+          <img
+            class="brand-logo"
+            src="./images/Logo.bmp"
+            width="512"
+            height="512"
+            alt="MBL Accompagnement"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <span class="sr-only">Ouvrir le menu</span>
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
+
+        <nav id="navigation" class="nav" aria-label="Navigation principale" data-collapsible="true">
+          <a class="nav-link" href="./index.html">Accueil</a>
+          <a class="nav-link nav-link--cta is-active" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Contact</h1>
+          <p class="lead">
+            Décrivez votre besoin côté agence&nbsp;: dossier en cours, niveau d’urgence, pack envisagé
+            (Essentiel / Sérénité / Renforcé) et contraintes de votre process avant-contrat. Vous pouvez
+            aussi nous joindre directement via les coordonnées ci-contre.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid grid-2 contact-grid">
+          <div class="contact-card">
+            <h2>Envoyer un message</h2>
+
+            <form class="form" id="contactForm" novalidate>
+              <div class="form-row">
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="name" required />
+                <p class="field-hint" id="nomHint">Indiquez votre nom complet.</p>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <p class="field-hint" id="emailHint">Ex: nom@domaine.fr</p>
+              </div>
+
+              <div class="form-row">
+                <label for="objet">Objet</label>
+                <input
+                  id="objet"
+                  name="objet"
+                  type="text"
+                  placeholder="Pack Essentiel / Sérénité / Renforcé — dossier avant-contrat…"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Décrivez votre situation: type de bien, délais, questions…"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <div id="recaptchaWidget"></div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+          <aside class="contact-card contact-card--aside">
+            <h2>Informations</h2>
+            <ul class="info-list">
+              <li>
+                <span class="info-k">Société</span>
+                <span class="info-v">MBL Accompagnement</span>
+              </li>
+              <li>
+                <span class="info-k">Activité</span>
+                <span class="info-v"
+                  >Assistance à la préparation des dossiers immobiliers et coordination en amont des
+                  avant-contrats en lien avec les professionnels habilités</span
+                >
+              </li>
+              <li>
+                <span class="info-k">Email</span>
+                <span class="info-v"><a href="mailto:contact@mblaccompagnement.fr">contact@mblaccompagnement.fr</a></span>
+              </li>
+              <li>
+                <span class="info-k">Site</span>
+                <span class="info-v"
+                  ><a href="https://www.mblaccompagnement.fr" rel="noopener noreferrer">www.mblaccompagnement.fr</a></span
+                >
+              </li>
+              <li>
+                <span class="info-k">Téléphone</span>
+                <span class="info-v"><a href="tel:+33611399045">06&nbsp;11&nbsp;39&nbsp;90&nbsp;45</a></span>
+              </li>
+              <li>
+                <span class="info-k">Tarifs</span>
+                <span class="info-v"
+                  >Tarifs exprimés en € HT — TVA non applicable, art.&nbsp;293&nbsp;B du CGI</span
+                >
+              </li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Avant de nous écrire</h3>
+            <ul class="checklist">
+              <li>Nom de l’agence + contact référent</li>
+              <li>Étape en cours (collecte dossier / avant-contrat / signature)</li>
+              <li>Pièces déjà disponibles + manques identifiés</li>
+              <li>Contraintes de délai / urgence</li>
+            </ul>
+
+            <div class="callout">
+              <p>
+                Besoin d’un retour rapide sur un document ?
+                <strong>Précisez “Urgent”</strong> dans l’objet.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">MBL Accompagnement</p>
+        <p class="footer-meta">
+          Préparation et coordination spécialisées des dossiers immobiliers en amont des avant-contrats, en lien avec les professionnels habilités.
+        </p>
+        <div class="footer-links">
+          <a href="mailto:contact@mblaccompagnement.fr">contact@mblaccompagnement.fr</a>
+          <a href="https://www.mblaccompagnement.fr" rel="noopener noreferrer">www.mblaccompagnement.fr</a>
+          <a href="tel:+33611399045">06&nbsp;11&nbsp;39&nbsp;90&nbsp;45</a>
+          <a href="./index.html">Accueil</a>
+          <a href="#contenu">Haut de page</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
